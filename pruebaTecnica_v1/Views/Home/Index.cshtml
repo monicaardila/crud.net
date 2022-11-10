@@ -1,0 +1,42 @@
+﻿
+<div class ="text-letf">
+    <h1 class="display-4">Prueba técnica para programadores remotos.</h1>
+    <p class="text-letf">
+        Realizar un CRUD que contenga una clase de base de datos, webconfig a la cadena de conexión, una clase producto con el método insertar
+        Además hacer botones:
+        <ul>
+            <li>Eliminar.</li>
+            <li>Actualizar.</li>
+            <li>Consultar con datatable.</li>
+        </ul>
+        E implementar con métodos de clase en la clase producto que interactúen con la clase base de datos
+        adjuntar
+        <ul>
+            <li>El código clase base de datos.</li>
+            <li>El código clase producto.</li>
+            <li>Código del formulario.</li>
+            <li>Y la ejecución. </li>
+        </ul>
+        Tecnologías a usar Visual Studio,Asp.Net
+        Paradigma: POO, en tres capas .
+    </p>
+    <br/>
+    <h3 class="display-8">Desarrollo de la prueba.</h3>
+    <p> Para el desarrollo de la prueba se instalo:
+        <ul>
+            <li>Visual studio 2022.</li>
+            <li>Microsoft sql server management studio.</li>
+        </ul>
+        Se creó el proyecto en visual studio, se utilizó la plantilla de aplicación web ASP.NET core (Modelo-Vista-Controlador) se le dio el nombre al proyecto<b> pruebaTecnica_v1 </b> se utilizo el framework .net 6.0 se agregó los paquetes NuGet <b>Microsoft.EntityFrameworkCore.SqlServer</b>
+        y <b>Microsoft.EntityFrameworkCore.Tools.</b> Se creo la base de datos llamada <b>pruebaTecnica_v1</b> y se creo la tabla productos
+        <p class="p-2 bg-dark text-white"> CREATE DATABASE <b>pruebaTecnica_v1</b> USE <b>pruebaTecnica_v1</b> CREATE TABLA Productos (Id int identity (1,1) primary key,
+        Nombre varchar(50),Precio float (10), Cantidad init, FechaVencimiento date
+        )</p>
+        Nos conectaremos a la Bd desde Visual studio abrimos la consola de administrador de paquetes, utilizáremos el paquete ya instalado tool,  escribiremos en la consola<p class="p-2 bg-dark text-white">
+        Scaffold-DbContext "server=localhost; database=<b>pruebaTecnica_v1</b>; integrated security=true;
+        Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models"</p>
+    Utilizamos la cadena de conexion que estara en appsettings.json.
+    <p class="p-2 bg-dark text-white">{"ConnectionStrings": {"BloggingDatabase": "server=localhost;database=pruebaTecnica_v1;integrated security=true;"},}</p>
+
+    
+</div>
